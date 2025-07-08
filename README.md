@@ -37,13 +37,13 @@
 ## query in mysql
 
 ## Selezionare tutti gli studenti nati nel 1990 (160)
-# METHOD 1
+### METHOD 1
 SELECT * 
 FROM `students`
 WHERE `date_of_birth` 
 LIKE '1990%';
 
-# METHOD 2
+### METHOD 2
 SELECT * 
 FROM `students`
 WHERE Year(date_of_birth) = '1990';
@@ -56,12 +56,12 @@ FROM `courses`
 WHERE `cfu` > 10;
 
 # Selezionare tutti gli studenti che hanno più di 30 anni
-## METHOD 1
+### METHOD 1
 select *
 FROM `students`
 where 2025 - Year(date_of_birth) > 30;
 
-## METHOD 2
+### METHOD 2
 SELECT *
 FROM `students`
 WHERE `date_of_birth` <= curdate() - interval 30 year
